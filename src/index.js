@@ -30,6 +30,7 @@ function App() {
         <Route path="/admin/products/create" element={<AddWine />} />
         <Route path="/admin/products/edit/:id" element={<EditWine />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

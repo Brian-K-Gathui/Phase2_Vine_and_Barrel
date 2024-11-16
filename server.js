@@ -18,8 +18,11 @@ const storage = multer.diskStorage({
     },
 });
 
+// Create the upload middleware
+const upload = multer({ storage }); // <-- Add this line
+
 // Use multer to handle multipart form-data
-server.use(upload);
+server.use(upload.single('picture')); // Specify the form field name for the file
 
 // POST handler for /products to handle validation and image upload
 server.post("/products", (req, res, next) => {
@@ -54,8 +57,10 @@ server.post("/products", (req, res, next) => {
         next();
     }
 });
+
 // Use JSON-Server router
 server.use(router);
+
 // Start the server
 server.listen(4000, () => {
     console.log("JSON Server is running at http://localhost:4000/");
