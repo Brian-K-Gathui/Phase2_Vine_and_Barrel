@@ -1,0 +1,427 @@
+/* General Body Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensures the body takes up the full viewport height */
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    color: #31190D; /* Body text color */
+}
+
+/* Root Element for Flex Layout */
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the layout spans the entire viewport */
+}
+
+/* Navbar Links Styling */
+.navbar .nav-link {
+    color: #31190D; /* Text color */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.navbar .nav-link:hover, 
+.navbar .dropdown-item:hover, 
+.navbar .dropdown-toggle:hover {
+    color: #9E845C; /* Hover color */
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu .dropdown-item {
+    color: #31190D; /* Initial text color */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Styling for the signout button */
+#signout {
+    color: #C96B00; /* Sets the text color to red */
+    font-weight: bold; /* Makes the text bold */
+}
+
+#signout:hover {
+    color: #c90000; /* Slightly darker red on hover */
+    font-weight: bold; /* Makes the text bold */
+}
+
+.footer {
+    margin-top: auto; /* Pushes the footer to the bottom of the page */
+    background-color: #9E845C;
+    color: white;
+    padding: 16px 0;
+    text-align: left;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: color 0.3s ease, opacity 0.3s ease; /* Smooth color and opacity transition */
+}
+
+.footer a:hover {
+    color: #31190D; /* Hover text color */
+    opacity: 1;
+}
+
+.footer small {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    display: block;
+    margin-top: 24px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.footer small:hover {
+    color: #31190D; /* Hover text color for small elements */
+}
+
+/* Footer Links Styling */
+.footer a,
+.footer .nav-link {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+}
+
+.footer a i,
+.footer .nav-link i {
+    margin-right: 8px; /* Space between icons and text */
+}
+
+.footer a:hover,
+.footer .nav-link:hover {
+    color: #31190D; /* Hover text color */
+    opacity: 1;
+}
+
+/* Dashboard Container Styling */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh; /* Ensures content is centered */
+    padding: 40px; /* Increased padding for more breathing space */
+    background-color: #f9f9f9; /* Matches the body background */
+    gap: 20px; /* Adds spacing between child elements */
+}
+
+/* Hero Section Styling */
+.hero-section {
+    max-width: 800px;
+    margin: 20px auto; /* Adds more spacing around the section */
+    padding: 40px; /* Increased padding for better spacing within the section */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.8; /* Better line spacing for readability */
+}
+
+/* Hero Section Text */
+.hero-section h1 {
+    font-size: 3em; /* Larger font for better visibility */
+    color: #31190D;
+    margin-bottom: 24px; /* Increased bottom margin */
+}
+
+.hero-section p {
+    font-size: 1.5em; /* Slightly larger font */
+    color: #70593B;
+    margin-bottom: 32px; /* Increased bottom margin */
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #9E845C;
+    color: white;
+    border: none;
+    padding: 16px 32px; /* Larger padding for buttons */
+    font-size: 1.2em; /* Larger button text */
+    border-radius: 6px; /* Slightly rounder corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #70593B;
+    transform: scale(1.05);
+}
+
+/* Add Wine Button Styling */
+#addWineButton {
+    background-color: #9E845C; /* Updated highlight color */
+    color: white;
+    border-color: #9E845C;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#addWineButton:hover{
+    background-color: transparent;
+    color: #9E845C;
+    border-color: #9E845C;
+}
+
+/* Refresh Button Styling */
+#refreshButton {
+    background-color: transparent;
+    color: #9E845C; /* Updated highlight color */
+    border-color: #9E845C;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#refreshButton:hover {
+    background-color: #9E845C;
+    color: white;
+    border-color: #9E845C;
+}
+
+/* Edit Button Styling */
+#editButton {
+    background-color: #9E845C;
+    color: white;
+    border: 1px solid #9E845C;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#editButton:hover,
+#editButton:focus,
+#editButton:active {
+    background-color: transparent;
+    color: #9E845C;
+    border-color: #9E845C;
+}
+
+/* Delete Button Styling */
+#deleteButton {
+    background-color: #C96B00;
+    color: white;
+    border: 1px solid #C96B00;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#deleteButton:hover,
+#deleteButton:focus,
+#deleteButton:active {
+    background-color: #c90000;
+    border-color: #c90000;
+}
+
+
+
+/* Add Wine Button Styling */
+#nextButton {
+    background-color: #31190D; /* Updated highlight color */
+    color: white;
+    border-color: #31190D;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#nextButton:hover{
+    background-color: transparent;
+    color: #31190D;
+    border-color: #31190D;
+}
+
+/* Refresh Button Styling */
+#previousButton {
+    background-color: transparent;
+    color: #31190D; /* Updated highlight color */
+    border-color: #31190D;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#previousButton:hover {
+    background-color: #31190D;
+    color: white;
+    border-color: #31190D;
+}
+
+
+
+/* Add bottom margin under the form */
+form {
+    border: none; /* Removes any border on the form itself */
+    box-shadow: none; /* Removes any box shadow if applied */
+    margin-bottom: 80px; /* Adds space below the form */
+}
+
+.container.my-4 .row .rounded.border {
+    border: none; /* Ensures the parent container has no border */
+    box-shadow: none; /* Ensures no shadows are applied */
+}
+
+/* Form Fields Styling */
+input.form-control, textarea.form-control, select.form-control {
+    border: 1px solid #9E845C; /* Border color */
+    border-radius: 4px; /* Smooth corners */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+}
+
+input.form-control:focus, textarea.form-control:focus, select.form-control:focus {
+    box-shadow: 0 0 5px #9E845C; /* Drop shadow on focus */
+    border-color: #9E845C; /* Ensure border remains consistent */
+    outline: none; /* Remove the default blue outline */
+}
+
+input.form-control:hover, textarea.form-control:hover, select.form-control:hover {
+    border-color: #70593B; /* Slightly darker border color on hover */
+}
+
+/* Placeholder Styling */
+input::placeholder,
+textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity for fading */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: rgba(0, 0, 0, 0.3); /* Further fade the placeholder when focused */
+}
+
+
+/* Contact Us Section Styling */
+.contact-us-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+}
+
+.contact-us-section h2 {
+    font-size: 2.5em;
+    color: #31190D;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.contact-us-section p {
+    font-size: 1.2em;
+    color: #31190D;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #31190D;
+    text-align: left;
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+.contact-table thead {
+    background-color: #31190D;
+    color: white;
+}
+
+.contact-table th, 
+.contact-table td {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+}
+
+.contact-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.contact-table tbody tr:hover {
+    background-color: #e2d4be;
+}
+
+.contact-link {
+    color: #31190D;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #9E845C;
+    font-weight: bold;
+}
+
+
+
+/* Profile Container Styling */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f9f9f9; /* Matches dashboard background */
+    padding: 20px;
+}
+
+/* Profile Card Styling */
+.profile-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    transition: transform 0.3s ease;
+}
+
+/* Profile Image Styling */
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #9E845C; /* Adds a nice border around the image */
+}
+
+/* Profile Name and Role */
+.profile-name {
+    font-size: 1.8em;
+    color: #31190D;
+    margin-bottom: 8px;
+}
+
+.profile-role {
+    font-size: 1.2em;
+    color: #70593B;
+    margin-bottom: 20px;
+}
+
+/* Profile Info Section */
+.profile-info {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.profile-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 1.1em;
+}
+
+.profile-key {
+    font-weight: bold;
+    color: #31190D;
+}
+
+.profile-value {
+    color: #70593B;
+    font-style: italic;
+}
+
