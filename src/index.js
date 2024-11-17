@@ -22,7 +22,7 @@ function App() {
       <Navbar />
       <Routes>
       <Route path="*" element={<NotFound />} />
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/Phase2_Vine_and_Barrel" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/sign-out" element={<Signout />} />

@@ -1,12 +1,24 @@
-import React from 'react';
-import { Link } from "react-router-dom"
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 
 export function Navbar() {
+    const [imageError, setImageError] = useState(false);
+
     return (
         <nav className="navbar navbar-expand-lg bg-white box-shadow">
             <div className="container">
-                <Link className="navbar-brand" to="/">
-                    <img src="/logo.png" alt="Vine & Barrel Logo" width="250" className="me-2" />
+                <Link className="navbar-brand" to="/Phase2_Vine_and_Barrel">
+                    {imageError ? (
+                        <span>Vine & Barrel</span>
+                    ) : (
+                        <img
+                            src="/logo.png"
+                            alt="Vine & Barrel Logo"
+                            width="250"
+                            className="me-2"
+                            onError={() => setImageError(true)}
+                        />
+                    )}
                 </Link>
                 <button
                     className="navbar-toggler"
@@ -51,10 +63,24 @@ export function Navbar() {
                                     Admin
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><Link className="dropdown-item" to="/admin/products"> Inventory </Link></li>
-                                    <li><Link className="dropdown-item" to="/Profile"> Profile </Link></li>
-                                    <li><hr className="dropdown-divider" /></li>
-                                    <li><Link className="dropdown-item" to="/sighn-out" id='signout'> Sign Out </Link></li>
+                                    <li>
+                                        <Link className="dropdown-item" to="/admin/products"> 
+                                            Inventory 
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="/Profile"> 
+                                            Profile 
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <hr className="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" to="/sign-out" id="signout"> 
+                                            Sign Out 
+                                        </Link>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>

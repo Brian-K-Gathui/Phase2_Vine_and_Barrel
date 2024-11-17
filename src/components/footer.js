@@ -1,20 +1,32 @@
-import React from 'react';
-import { Container, Row, Col, Image, Nav } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Row, Col, Nav } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
 export function Footer() {
+    const [imageError, setImageError] = useState(false);
+
     return (
         <footer className="footer text-white py-4 d-flex flex-column">
             <Container>
                 <Row className="align-items-start justify-content-center">
                     <Col md={3} className="d-flex align-items-center justify-content-center">
-                        <Image src="/logo_brown.png" alt="Vine & Barrel Logo" width="250" className="me-2" />
+                        {imageError ? (
+                            <span>Vine & Barrel</span>
+                        ) : (
+                            <img
+                                src="/logo_brown.png"
+                                alt="Vine & Barrel Logo"
+                                width="250"
+                                className="me-2"
+                                onError={() => setImageError(true)}
+                            />
+                        )}
                     </Col>
 
                     <Col md={3} className="mt-3 mt-md-0">
                         <Nav className="flex-column">
                             <Nav.Item>
-                                <Link to="/" className="footer-link">Home</Link>
+                                <Link to="/Phase2_Vine_and_Barrel" className="footer-link">Home</Link>
                             </Nav.Item>
                             <Nav.Item>
                                 <Link to="/contact-us" className="footer-link">Contact Us</Link>

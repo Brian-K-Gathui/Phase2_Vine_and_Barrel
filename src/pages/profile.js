@@ -5,7 +5,7 @@ export function Profile() {
     return (
         <div className="profile-container">
             <div className="profile-card">
-                <img src="profile_bw.png" alt="Admin Profile" className="profile-image" />
+                {/* <img src="profile_bw.png" alt="Admin Profile" className="profile-image" /> */}
                 <h2 className="profile-name">Admin Name</h2>
                 <p className="profile-role">Administrator</p>
                 <div className="profile-info">
@@ -15,7 +15,7 @@ export function Profile() {
                     </div>
                     <div className="profile-item">
                         <span className="profile-key">Phone:</span>
-                        <span className="profile-value">+1-234-567-8901</span>
+                        <span className="profile-value">+254 789 588 400</span>
                     </div>
                     <div className="profile-item">
                         <span className="profile-key">Role:</span>
